@@ -3,3 +3,7 @@ variable "instance_name" {
   type        = string
   default     = "NobitaEC2Instance"
 }
+
+variable "aws_region" {
+  type = string
+}

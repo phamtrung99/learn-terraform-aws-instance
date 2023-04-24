@@ -1,4 +1,10 @@
 terraform {
+  # cloud {
+  #   organization = "nobita99"
+  #   workspaces {
+  #     name = "nobita_aws_workspace"
+  #   }
+  # }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -10,8 +16,7 @@ terraform {
 }
 
 provider "aws" {
-  region  = "ap-northeast-1"
-  profile = "default"
+  region = var.aws_region
 }
 
 resource "aws_instance" "nobita_server" {
